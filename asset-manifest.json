@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/number_baseball_game/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/number_baseball_game/static/js/main.1d121388.chunk.js",
+    "main.js.map": "/number_baseball_game/static/js/main.1d121388.chunk.js.map",
+    "runtime-main.js": "/number_baseball_game/static/js/runtime-main.a591fd26.js",
+    "runtime-main.js.map": "/number_baseball_game/static/js/runtime-main.a591fd26.js.map",
+    "static/js/2.d67a8beb.chunk.js": "/number_baseball_game/static/js/2.d67a8beb.chunk.js",
+    "static/js/2.d67a8beb.chunk.js.map": "/number_baseball_game/static/js/2.d67a8beb.chunk.js.map",
+    "index.html": "/number_baseball_game/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/number_baseball_game/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.d67a8beb.chunk.js.LICENSE.txt": "/number_baseball_game/static/js/2.d67a8beb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a591fd26.js",
+    "static/js/2.d67a8beb.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.1d121388.chunk.js"
+  ]
+}
