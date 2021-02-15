@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/number_baseball_game/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/number_baseball_game/static/js/main.609dfcf2.chunk.js",
-    "main.js.map": "/number_baseball_game/static/js/main.609dfcf2.chunk.js.map",
+    "main.css": "/number_baseball_game/static/css/main.e8bf4c1b.chunk.css",
+    "main.js": "/number_baseball_game/static/js/main.a1b695ef.chunk.js",
+    "main.js.map": "/number_baseball_game/static/js/main.a1b695ef.chunk.js.map",
     "runtime-main.js": "/number_baseball_game/static/js/runtime-main.a591fd26.js",
     "runtime-main.js.map": "/number_baseball_game/static/js/runtime-main.a591fd26.js.map",
-    "static/js/2.d67a8beb.chunk.js": "/number_baseball_game/static/js/2.d67a8beb.chunk.js",
-    "static/js/2.d67a8beb.chunk.js.map": "/number_baseball_game/static/js/2.d67a8beb.chunk.js.map",
+    "static/js/2.bbc0f4db.chunk.js": "/number_baseball_game/static/js/2.bbc0f4db.chunk.js",
+    "static/js/2.bbc0f4db.chunk.js.map": "/number_baseball_game/static/js/2.bbc0f4db.chunk.js.map",
     "index.html": "/number_baseball_game/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/number_baseball_game/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.d67a8beb.chunk.js.LICENSE.txt": "/number_baseball_game/static/js/2.d67a8beb.chunk.js.LICENSE.txt"
+    "static/css/main.e8bf4c1b.chunk.css.map": "/number_baseball_game/static/css/main.e8bf4c1b.chunk.css.map",
+    "static/js/2.bbc0f4db.chunk.js.LICENSE.txt": "/number_baseball_game/static/js/2.bbc0f4db.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/number_baseball_game/static/media/baseball.115cff53.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a591fd26.js",
-    "static/js/2.d67a8beb.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.609dfcf2.chunk.js"
+    "static/js/2.bbc0f4db.chunk.js",
+    "static/css/main.e8bf4c1b.chunk.css",
+    "static/js/main.a1b695ef.chunk.js"
   ]
 }
