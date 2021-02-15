@@ -1,8 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Result.css";
 
 function Result(props) {
   console.log(props);
+  let isCnt = false;
+  if (props.location.state) {
+    isCnt = true;
+  } else {
+    return (
+      <div className="result">
+        <h1>No result</h1>
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+        <Link to="/play">
+          <button>↻Restart</button>
+        </Link>
+      </div>
+    );
+  }
   const cnt = props.location.state.cnt;
   return (
     <div className="result">

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Redirect } from "react-router-dom";
-
+import "./Play.css";
 class Play extends React.Component {
   state = {
     num: 0,
@@ -159,7 +159,7 @@ class Play extends React.Component {
     this.makeAns();
   }
   render() {
-    const { num, logList, isFinish, cnt } = this.state;
+    const { logList, isFinish, cnt } = this.state;
 
     return (
       <>
@@ -167,7 +167,6 @@ class Play extends React.Component {
           <Redirect to={{ pathname: "/result", state: { cnt: cnt } }} />
         ) : (
           <div className="playing">
-            <div>{num}</div>
             <input
               type="number"
               placeholder="Try!"

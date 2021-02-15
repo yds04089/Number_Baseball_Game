@@ -1,0 +1,14 @@
+.howToPlay {
+  background-color: white;
+  margin: 300px;
+  padding: 50px;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+}
+.howToPlay button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: transparent;
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import Play from "./Play";
 import { HashRouter, Link } from "react-router-dom";
+import "./Home.css";
 
 class Home extends React.Component {
   render() {
     return (
       <HashRouter>
-        <div>
+        <div className="home">
           <h1>Number Baseball Game⚾</h1>
           <div className="buttons">
             <Link to="/play">

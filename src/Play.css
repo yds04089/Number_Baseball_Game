@@ -1,0 +1,18 @@
+.playing {
+  background-color: white;
+  margin-top: 50px;
+  padding-top: 30px;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+}
+
+.playing ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.playing ul li {
+  margin: 0;
+}
