@@ -1,10 +1,15 @@
 .playing {
   background-color: white;
-  margin-top: 50px;
+  margin-top: 100px;
   padding-top: 30px;
   text-align: center;
   width: 300px;
   height: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px gray;
+}
+.playing input {
+  border: solid 1px brown;
 }
 
 .playing ul {

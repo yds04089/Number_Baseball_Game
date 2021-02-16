@@ -15,6 +15,7 @@ class Play extends React.Component {
     this.setState({
       num: n,
     });
+    console.log("n: ", n);
   };
 
   makeNumList = (num) => {
@@ -136,6 +137,7 @@ class Play extends React.Component {
   handleKeyPress = (e) => {
     if (e.key === "Enter") {
       this.handleSubmit();
+      e.target.value = "";
     }
   };
 
@@ -143,7 +145,7 @@ class Play extends React.Component {
     const { num } = this.state;
     if (num > 1000 && num <= 9999) {
       if (this.isDup(num)) {
-        alert("You should choose differnt number");
+        alert("서로 다른 숫자로 된 네자리 수를 선택해주세요!");
         this.setState({ num: 0 });
       } else {
         const numList = this.makeNumList(num);
