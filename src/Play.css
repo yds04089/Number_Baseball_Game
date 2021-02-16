@@ -7,9 +7,40 @@
   height: 500px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 .playing input {
-  border: solid 1px brown;
+  border: none;
+  border-bottom: solid 2px gray;
+  margin: 50px auto 0px auto;
+  font-size: 30px;
+  text-align: center;
+  width: 100px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.playing > .buttons {
+  position: absolute;
+  text-align: center;
+  top: 500px;
+  width: 200px;
+  height: 45px;
+  margin: auto;
+}
+.playing a {
+  text-decoration: none;
 }
 
 .playing ul {

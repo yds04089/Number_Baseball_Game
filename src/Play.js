@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import "./Play.css";
 class Play extends React.Component {
   state = {
@@ -145,7 +145,7 @@ class Play extends React.Component {
     const { num } = this.state;
     if (num > 1000 && num <= 9999) {
       if (this.isDup(num)) {
-        alert("서로 다른 숫자로 된 네자리 수를 선택해주세요!");
+        alert("서로 다른 숫자로 된 네자리 수를 입력해주세요!");
         this.setState({ num: 0 });
       } else {
         const numList = this.makeNumList(num);
@@ -153,8 +153,11 @@ class Play extends React.Component {
         this.setState({ num: 0 });
       }
     } else {
-      alert("Try again!");
+      alert("1000~9999 사이의 수를 입력하세요!");
     }
+  };
+  showAns = (ans) => {
+    alert(`answer: ${ans}`);
   };
 
   componentDidMount() {
@@ -176,6 +179,18 @@ class Play extends React.Component {
               onKeyPress={(e) => this.handleKeyPress(e)}
             />
             <ul>{this.makeList({ logList })}</ul>
+            <div className="buttons">
+              <button
+                onClick={() => {
+                  const ans = this.state.ans;
+                  this.showAns(ans);
+                  this.props.history.push("/result");
+                }}
+              >
+                Answer
+              </button>
+              <button onClick={() => window.location.reload()}>Restart</button>
+            </div>
           </div>
         )}
       </>
