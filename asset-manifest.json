@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/number_baseball_game/static/css/main.a9e95efd.chunk.css",
-    "main.js": "/number_baseball_game/static/js/main.c67a26d1.chunk.js",
-    "main.js.map": "/number_baseball_game/static/js/main.c67a26d1.chunk.js.map",
+    "main.css": "/number_baseball_game/static/css/main.345ff1a2.chunk.css",
+    "main.js": "/number_baseball_game/static/js/main.a64f8638.chunk.js",
+    "main.js.map": "/number_baseball_game/static/js/main.a64f8638.chunk.js.map",
     "runtime-main.js": "/number_baseball_game/static/js/runtime-main.a591fd26.js",
     "runtime-main.js.map": "/number_baseball_game/static/js/runtime-main.a591fd26.js.map",
     "static/js/2.11ed84aa.chunk.js": "/number_baseball_game/static/js/2.11ed84aa.chunk.js",
     "static/js/2.11ed84aa.chunk.js.map": "/number_baseball_game/static/js/2.11ed84aa.chunk.js.map",
     "index.html": "/number_baseball_game/index.html",
-    "static/css/main.a9e95efd.chunk.css.map": "/number_baseball_game/static/css/main.a9e95efd.chunk.css.map",
+    "static/css/main.345ff1a2.chunk.css.map": "/number_baseball_game/static/css/main.345ff1a2.chunk.css.map",
     "static/js/2.11ed84aa.chunk.js.LICENSE.txt": "/number_baseball_game/static/js/2.11ed84aa.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/number_baseball_game/static/media/baseball.115cff53.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a591fd26.js",
     "static/js/2.11ed84aa.chunk.js",
-    "static/css/main.a9e95efd.chunk.css",
-    "static/js/main.c67a26d1.chunk.js"
+    "static/css/main.345ff1a2.chunk.css",
+    "static/js/main.a64f8638.chunk.js"
   ]
 }
