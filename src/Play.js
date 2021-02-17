@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Redirect, Link } from "react-router-dom";
 import "./Play.css";
+import Swal from "sweetalert2";
+
 class Play extends React.Component {
   state = {
     num: 0,
@@ -9,6 +11,16 @@ class Play extends React.Component {
     cnt: 0,
     logList: [],
     isFinish: false,
+    gameOver: false,
+  };
+
+  sweetalert = (title, contents, icon, confirmButtonText) => {
+    Swal.fire({
+      title: title,
+      text: contents,
+      icon: icon,
+      confirmButtonText: confirmButtonText,
+    });
   };
 
   modify = (n) => {
@@ -63,6 +75,7 @@ class Play extends React.Component {
   check = (numList) => {
     const num = this.state.num;
     const ans = this.state.ans;
+    const cnt = this.state.cnt;
     let logList = this.state.logList;
     const ans1 = Math.floor(ans / 1000);
     const ans2 = Math.floor((ans % 1000) / 100);
@@ -71,7 +84,10 @@ class Play extends React.Component {
     let strike = 0;
     let ball = 0;
     console.log(ans1, ans2, ans3, ans4, ans, numList, num);
-    if (num === ans) {
+    if (cnt === 9) {
+      this.setState({ gameOver: true });
+      this.setState({ isFinish: true });
+    } else if (num === ans) {
       logList = logList.concat(
         `Conratulation!🎉 Your Count: ${this.state.cnt}`
       );
@@ -111,18 +127,14 @@ class Play extends React.Component {
           ball += 1;
         }
       }
-      if (strike === 0 && ball === 0) {
-        this.setState({ log: "Out" });
-      } else {
-        const newLog = `${num}: ${strike}strike, ${ball}ball`;
-        logList = logList.concat(newLog);
-        console.log(newLog);
-        //let log = this.state.log.concat("\n", newLog);
-        //console.log(log);
-        this.setState({ logList: logList });
-        this.setState({ cnt: this.state.cnt + 1 });
-        //this.updateLog({ newLog });
-      }
+      const newLog =
+        strike === 0 && ball === 0
+          ? `${num} → out`
+          : `${num} → ${strike} strike, ${ball} ball`;
+      logList = logList.concat(newLog);
+      console.log(newLog);
+      this.setState({ logList: logList });
+      this.setState({ cnt: this.state.cnt + 1 });
     }
   };
 
@@ -145,7 +157,12 @@ class Play extends React.Component {
     const { num } = this.state;
     if (num > 1000 && num <= 9999) {
       if (this.isDup(num)) {
-        alert("서로 다른 숫자로 된 네자리 수를 입력해주세요!");
+        this.sweetalert(
+          "Wrong Input",
+          "서로 다른 숫자로 된 네자리 수를 입력해주세요!",
+          "warning",
+          "닫기"
+        );
         this.setState({ num: 0 });
       } else {
         const numList = this.makeNumList(num);
@@ -153,25 +170,36 @@ class Play extends React.Component {
         this.setState({ num: 0 });
       }
     } else {
-      alert("1000~9999 사이의 수를 입력하세요!");
+      this.sweetalert(
+        "Wrong Input",
+        "1000~9999 사이의 수를 입력하세요!",
+        "warning",
+        "닫기"
+      );
     }
   };
   showAns = (ans) => {
-    alert(`answer: ${ans}`);
+    this.sweetalert(`answer: ${ans}`, "", "info", "확인");
   };
 
   componentDidMount() {
     this.makeAns();
   }
   render() {
-    const { logList, isFinish, cnt } = this.state;
+    const { logList, isFinish, cnt, gameOver } = this.state;
 
     return (
       <>
         {isFinish ? (
-          <Redirect to={{ pathname: "/result", state: { cnt: cnt } }} />
+          <Redirect
+            to={{
+              pathname: "/result",
+              state: { cnt: cnt, gameOver: gameOver },
+            }}
+          />
         ) : (
           <div className="playing">
+            <div className="nowCnt">left chances: {10 - cnt}</div>
             <input
               type="number"
               placeholder="Try!"
@@ -187,7 +215,7 @@ class Play extends React.Component {
                   this.props.history.push("/result");
                 }}
               >
-                Answer
+                Give up
               </button>
               <button onClick={() => window.location.reload()}>Restart</button>
             </div>

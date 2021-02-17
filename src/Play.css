@@ -3,20 +3,21 @@
   margin-top: 100px;
   padding-top: 30px;
   text-align: center;
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px gray;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  animation: fadeIn 0.3s linear;
 }
 .playing input {
   border: none;
   border-bottom: solid 2px gray;
   margin: 50px auto 0px auto;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   width: 100px;
 }
@@ -34,7 +35,7 @@ input:focus {
 .playing > .buttons {
   position: absolute;
   text-align: center;
-  top: 500px;
+  top: 600px;
   width: 200px;
   height: 45px;
   margin: auto;
@@ -42,7 +43,12 @@ input:focus {
 .playing a {
   text-decoration: none;
 }
-
+.playing .nowCnt {
+  position: absolute;
+  left: 52%;
+  top: 110px;
+  font-size: 20px;
+}
 .playing ul {
   list-style: none;
   text-align: center;
@@ -51,4 +57,14 @@ input:focus {
 
 .playing ul li {
   margin: 0;
+  font-size: 25px;
+  animation: fadeIn 0.5s linear;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

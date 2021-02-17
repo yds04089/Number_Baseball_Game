@@ -10,6 +10,7 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px gray;
+  animation: fadeIn 0.5s linear;
 }
 body {
   position: absolute;
@@ -40,4 +41,12 @@ body {
   color: white;
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
   transform: scale(0.9);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
