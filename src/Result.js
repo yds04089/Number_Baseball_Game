@@ -10,7 +10,7 @@ function Result(props) {
   } else {
     return (
       <div className="result">
-        <h1>화이팅!</h1>
+        <h1>어렵죠?</h1>
         <h4>다음엔 스스로 맞춰보세요!😊</h4>
         <Link to="/">
           <button>Home</button>

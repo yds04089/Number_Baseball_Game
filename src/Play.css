@@ -48,6 +48,11 @@ input:focus {
   left: 52%;
   top: 110px;
   font-size: 20px;
+
+  border-radius: 3px;
+  padding: 2px 5px 2px 5px;
+  background-color: rgb(211, 240, 211);
+  box-shadow: 0px 0px 5px 0px lightgray;
 }
 .playing ul {
   list-style: none;
